@@ -1,12 +1,28 @@
-from turtle import circle
+'''  
+Объявите класс с именем MediaPlayer с двумя методами:
+
+open(file) - для открытия медиа-файла с именем file (создает локальное свойство filename со значением аргумента file в объекте класса MediaPlayer)
+play() - для воспроизведения медиа-файла (выводит на экран строку "Воспроизведение <название медиа-файла>")
+
+Создайте два экземпляра этого класса с именами: media1 и media2. Вызовите из них метод open() с аргументом "filemedia1" для объекта media1 и "filemedia2" для объекта media2. После этого вызовите через объекты метод play(). При этом, на экране должно отобразиться две строки (без кавычек):
+
+"Воспроизведение filemedia1"
+"Воспроизведение filemedia2"
 
 
-class Point:
-    color = 'red'
-    circle = 2
+'''
 
-    def set_coords(self):
-        print(f"Call fucn set_coords = D {str(self)}")
+class MediaPlayer:
+    filename = ''
+    def open(self, filename):
+        self.filename = filename
+    def play(self):
+        print(f"Воспроизведение {self.filename}")
+     
 
-x = Point()
-x.set_coords()
+media1 = MediaPlayer()
+media1.open('filemedia1')
+media1.play()
+media2 = MediaPlayer()
+media2.open('filemedia2')
+media2.play()
