@@ -34,4 +34,4 @@ class Point:
 
 
 pt = Point(10, 4)
-fprint(pt.__dict__)
+print(pt.__dict__)
